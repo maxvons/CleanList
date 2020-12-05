@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleList - The most effective to-do list</title>
+    <meta name="description" content="A simple and effective way of planning
+    your tasks.">
+    <meta property="og:title" content="SimpleList">
+    <meta property="og:description" content="The simple and effective to-do list.">
+    <meta property="og:image" content="pictures/demo_screenshot.jpg"> <!-- needs to be filled in -->
+    <meta property="og:url" content="url.com"> <!-- needs to be filled in -->
+    <meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"> <!-- Animate.css -->
+    <script src="todo_list.js"></script>
+</head>
+
+<body>
+    <div id="main-div">
+        <div class="heading-div">
+            <h1 class="title">05.12.2020</h1>
+            <span class="sub-title">Sat</span>
+        </div>
+        <h2 class="tasks-heading">Today's tasks</h2>
+        <ul class="todo-list js-todo-list"></ul>
+    </div>
+    <svg class="fab" onclick="activateInputField()" alt="Add new task button" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="30" x2="30" y2="60" stroke-width="8"/>
+        <line y1="29" x2="60" y2="29" stroke-width="8"/>
+    </svg>
+
+    <!--
+    <img class="fab" src="assets/plus.svg" alt="Add new task button" 
+         onclick="activateInputField()">
+    -->
+    <form id="todo-list-form" class="hide">
+        <input autofocus type="text" aria-label="Enter a new todo item"
+               placeholder="E.g. End world hunger" class="todo-list-input">
+    </form>
+</body>
+
+</html>
