@@ -328,6 +328,11 @@ input[type="checkbox"] {
 @media screen and (max-width: 580px) {
     li {
         max-width: 25rem;
+        padding: 1.6rem;
+    }
+
+    label {
+        margin-right: 1.6rem;
     }
 
     .title {
