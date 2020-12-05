@@ -124,7 +124,7 @@ window.onload = function() {
         if (event.target.classList.contains("task") || 
             event.target.classList.contains("tick") ||
             event.target.classList.contains("delete-button")) {
-            
+
             console.log("clicked");
             // Get the key of the item that was clicked.
             let itemKey = 0
