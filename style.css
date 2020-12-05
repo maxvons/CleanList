@@ -350,6 +350,10 @@ input[type="checkbox"] {
         margin-bottom: 1.6rem;
     }
 
+    .empty-state-title {
+        margin-top: 1.6rem;
+    }
+
     .fab {
         width: 1.5rem;
         height: 1.5rem;
