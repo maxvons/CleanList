@@ -108,7 +108,6 @@ window.onload = function() {
         if (text !== "") {
             addToDo(text);
             input.value = "";
-            input.focus();
             clearErrorMessage();
             hideInputField();
         }   else {
