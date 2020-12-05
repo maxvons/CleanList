@@ -4,20 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimpleList - The most effective to-do list</title>
+    <title>CleanList - The most effective to-do list</title>
     <meta name="description" content="A simple and effective way of planning
     your tasks.">
-    <meta property="og:title" content="SimpleList">
+    <meta property="og:title" content="CleanList">
     <meta property="og:description" content="The simple and effective to-do list.">
     <meta property="og:image" content="assets/demo_screenshot.png">
     <meta property="og:url" content="https://cleanlist.netlify.app/">
     <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"> <!-- Animate.css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> <!-- IBM Plex Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet"> <!-- IBM Plex Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> <!-- IBM Plex Sans -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io_cleanlist/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io_cleanlist/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io_cleanlist/favicon-16x16.png">
-    <link rel="manifest" href="favicon_io_cleanlist/site.webmanifest">
     <script src="todo_list.js"></script>
 </head>
 
@@ -29,6 +32,17 @@
         </div>
         <h2 class="tasks-heading">Today's tasks</h2>
         <ul class="todo-list js-todo-list"></ul>
+        <div class="empty-state">
+            <h3 class="empty-state-title"><span class="strong-text">Add a new task</span> to get started</h2>
+            <svg class ="empty-state-icon" alt="Empty task list icon" width="70" height="80" viewBox="0 0 70 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="66" height="76" fill="white" stroke="#212121" stroke-width="4"/>
+                <rect x="13" y="18" width="20" height="8" fill="#212121"/>
+                <rect x="13" y="36" width="45" height="8" fill="#212121"/>
+                <rect x="13" y="54" width="45" height="8" fill="#212121"/>
+            </svg>    
+            <p class="empty-state-desc">Press the button in the <span class="strong-text">bottom right 
+                corner</span> to add a new task.</p>
+        </div>
     </div>
     <svg class="fab" onclick="activateInputField()" alt="Add new task button" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line x1="30" x2="30" y2="60" stroke-width="8"/>

@@ -207,6 +207,45 @@ input[type="checkbox"] {
                 background-color 0.2s ease, stroke 0.2s ease;
 }
 
+.empty-state {
+    font-family: "IBM Plex Sans", Arial;
+    text-align: center;
+    display: none;
+}
+
+.empty-state-title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-primary-color);
+    margin-bottom: 3.2rem;
+    margin-top: 3.2rem;
+}
+
+.empty-state-desc {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--text-secondary-color);
+}
+
+.empty-state-icon {
+    height: 10rem;
+    width: 10rem;
+    margin-bottom: 3.2rem;
+}
+
+.todo-list:empty {
+    display: none;
+}
+
+.todo-list:empty + .empty-state {
+    display: block;
+}
+
+.strong-text {
+    color: var(--text-primary-color);
+    font-weight: 600;
+}
+
 #main-div {
     display: grid;
     grid-template-rows: 1fr;

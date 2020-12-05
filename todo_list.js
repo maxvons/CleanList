@@ -1,7 +1,18 @@
 window.onload = function() {
     let tasks = [];
 
+    // Add saved tasks on browser refresh.
+    const ref = localStorage.getItem("tasksRef");
+        if (ref) {
+          tasks = JSON.parse(ref);
+          tasks.forEach(t => {
+            renderTask(t);
+          });
+        }
+
     function renderTask(task) {
+        localStorage.setItem("tasksRef", JSON.stringify(tasks));
+        
         const list = document.querySelector(".todo-list");
 
         // Check if task is done or not.
@@ -50,6 +61,9 @@ window.onload = function() {
 
         const item = document.querySelector(`[data-key='${task.id}']`);
         item.remove();
+
+        // Update local storage.
+        localStorage.setItem("tasksRef", JSON.stringify(tasks));
     }
 
     function showErrorMessage() {
@@ -140,6 +154,6 @@ window.onload = function() {
 
         form.className = "show";
 
-        // Focus input field
+        // Focus input field.
         document.querySelector(".todo-list-input").focus();
     }
