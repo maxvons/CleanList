@@ -328,6 +328,16 @@ input[type="checkbox"] {
     }
 }
 
+@media screen and (max-width: 580px) {
+    .title {
+        margin-right: 0;
+    }
+
+    .sub-title {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 450px) {
     .title {
         font-size: 4rem;
@@ -359,6 +369,8 @@ input[type="checkbox"] {
     .fab:hover {
         box-shadow: none;
         transform: none;
+        background-color: var(--color-black);
+        fill: var(--color-white);
     }
 
     .add-button:hover {
