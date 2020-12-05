@@ -116,7 +116,7 @@ window.onload = function() {
             let itemKey = 0
             if (event.target.classList.contains("task")) {
                 itemKey = event.target.dataset.key;
-            }   el{
+            }   else {
                 itemKey = event.target.parentElement.dataset.key;
             }
             removeTask(itemKey);
