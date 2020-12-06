@@ -21,7 +21,7 @@ window.onload = function() {
         // Create list element and add to list.
         const node = document.createElement("li");
 
-        node.setAttribute("class", "task ${isChecked}");
+        node.setAttribute("class", "task ${isChecked} animate__animated animate__fadeInUp");
         node.setAttribute("data-key", task.id);
 
         // Set the contents of the list element.
@@ -73,7 +73,8 @@ window.onload = function() {
         input_field = document.querySelector(".todo-list-input");
 
         input_field.className += " error-border";
-        input_field.setAttribute("placeholder", "Do I have to show you how to do it myself?");
+        input_field.setAttribute("placeholder", "Cannot add an empty task.");
+        micron.getEle("#todo-textarea").interaction("shake").duration(".45").timing("ease-in-out");
     }
 
     function clearErrorMessage() {

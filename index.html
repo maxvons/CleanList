@@ -14,6 +14,8 @@
     <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"> <!-- Animate.css -->
+    <link href="https://unpkg.com/webkul-micron@1.1.6/dist/css/micron.min.css" type="text/css" rel="stylesheet"> <!-- Micron js -->
+    <script src="https://unpkg.com/webkul-micron@1.1.6/dist/script/micron.min.js" type="text/javascript"></script> <!-- Micron js -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> <!-- IBM Plex Mono -->
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet"> <!-- IBM Plex Serif -->
@@ -58,16 +60,6 @@
         <line y1="29" x2="60" y2="29" stroke-width="8"/>
     </svg>
 
-    <!--
-    <img class="fab" src="assets/plus.svg" alt="Add new task button" 
-         onclick="activateInputField()">
-    -->
-    <form id="todo-list-form" class="hide">
-        <textarea rows="2" cols="35" autofocus aria-label="Enter a new todo item"
-                  placeholder="E.g. End world hunger" class="todo-list-input"></textarea>
-        <button class="add-button" aria-label="Add new todo item">ADD</button>
-    </form>
-
     <svg style="display: none;">
         <symbol viewBox="0 0 24 24" id="moon">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
@@ -89,7 +81,7 @@
     <button
         class="color-mode_btn light-hidden"
         aria-label="Toggle light mode">
-        <svg aria-hidden="true">
+        <svg id="light-mode-icon" aria-hidden="true">
             <title>Light Mode</title>
             <use href="#sun"></use>
         </svg>
@@ -104,6 +96,12 @@
             <use href="#moon"></use>
         </svg>
     </button>
+
+    <form id="todo-list-form" class="hide">
+        <textarea id="todo-textarea" rows="2" cols="35" autofocus aria-label="Enter a new todo item"
+                  placeholder="E.g. End world hunger" class="todo-list-input"></textarea>
+        <button class="add-button" aria-label="Add new todo item">ADD</button>
+    </form>
     <script src="toggle_color_mode.js"></script>
 </body>
 
