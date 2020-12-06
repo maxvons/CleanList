@@ -1,19 +1,88 @@
-:root {
+:root[color-mode="light"] {
+
+    /* Light background colors */
     --background-color: #FFFFFF;
     --form-background-color: #FFFFFF;
+    --list-background-color: #FFFFFF;
+    --list-background-color-prominent: #FFFFFF;
+    --list-background-color-active: #FFFFFF;
+    --text-area-background-color: #FFFFFF;
+    --text-area-background-color-prominent: #FFFFFF;
+    --add-button-background-color: #FFFFFF;
+    --add-button-background-color-prominent: #FFFFFF;
+    --add-button-background-color-active: #FFFFFF;
+    --del-button-background-color: #FFFFFF;
+    --del-button-background-color-prominent: #FFFFFF;
 
-    --primary-color: #3e36d7;
+    /* Light primary and secondary colors */
+    --primary-color: #003ce4;
+    --accent-color: #FFFFFF;
 
+    /* Light text colors */
     --text-primary-color: #1B2C39;
     --text-secondary-color: #5C656B;
 
+    /* Light component colors */
     --button-hover-color: rgba(0, 0, 0, 0.50);
     --shadow-color: #212121;
+    --fab-primary-color: #212121;
+    --fab-stroke-color-hovered: #212121;
+    --fab-border-color-hovered: #212121;
+    --delete-button-color: #212121;
 
+    /* Light misc. colors */
     --color-black: #212121;
     --color-white: #FFFFFF;
     --color-red: #f53d5a;
     --color-black-opaque: rgba(0, 0, 0, 0);
+    --color-rect: #212121;
+}
+
+:root[color-mode="dark"] {
+
+    /* Dark background colors */
+    --background-color: #0F1119;
+    --form-background-color: #0F1119;
+    --list-background-color: #1B1D25;
+    --list-background-color-prominent: #25262E;
+    --list-background-color-active: #474E75;
+    --text-area-background-color: #1B1D25;
+    --text-area-background-color-prominent: #25262E;
+    --add-button-background-color: #1B1D25;
+    --add-button-background-color-prominent: #25262E;
+    --add-button-background-color-active: #474E75;
+    --del-button-background-color: rgba(0, 0, 0, 0);
+    --del-button-background-color-prominent: #25262E;
+
+    /* Dark primary and secondary colors */
+    --primary-color: #9baaff;
+    --accent-color: #64FFDA;
+
+    /* Dark text colors */
+    --text-primary-color: #D2D5E7;
+    --text-secondary-color: #9FA1AC;
+
+    /* Dark component colors */
+    --button-hover-color: rgba(255, 255, 255, 0.5);
+    --shadow-color: rgba(0, 0, 0, 0);
+    --fab-primary-color: #9baaff;
+    --fab-stroke-color-hovered: #212121;
+    --fab-border-color-hovered: #64FFDA;
+    --delete-button-color: #D2D5E7;
+
+    /* Dark misc. colors */
+    --color-black: #E3E3E4;
+    --color-white: #212121;
+    --color-red: #f53d5a;
+    --color-rect: #E3E3E4;
+}
+
+:root[color-mode="light"] .light-hidden {
+    display: none;
+}
+
+:root[color-mode="dark"] .dark-hidden {
+    display: none;
 }
 
 
@@ -48,6 +117,7 @@ ul {
 
 li {
     color: var(--text-primary-color);
+    background-color: var(--list-background-color);
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -57,17 +127,19 @@ li {
     margin-bottom: 3.2rem;
     max-width: 40rem;
     box-shadow: 0px 0px 0px 0px #000;
-    transition: box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 li:hover {
     box-shadow: 6px 6px 0px 0px var(--shadow-color);
-    transition: box-shadow 0.2s ease;
+    background-color: var(--list-background-color-prominent);
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 li:active {
     box-shadow: 0px 0px 0px 0px var(--shadow-color);
-    transition: box-shadow 0.2s ease;
+    background-color: var(--list-background-color-active);
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 label {
@@ -124,7 +196,7 @@ input[type="checkbox"] {
 
 .delete-button {
     float: right;
-    background-color: var(--color-white);
+    background-color: var(--del-button-background-color);
     transition: opacity 0.2s ease;
 }
 
@@ -136,19 +208,20 @@ input[type="checkbox"] {
 .todo-list-input {
     max-width: 80vw;
     padding: 1.6rem;
-    background-color: #FFF;
+    margin-bottom: 6.4rem;
+    color: var(--text-primary-color);
+    background-color: var(--text-area-background-color);
     border: 8px solid var(--color-black);
     font-family: "IBM Plex Sans", Arial;
     font-size: 2rem;
-    transition: border 0.2s ease;
     box-shadow: 0px 0px 0px 0px var(--shadow-color);
-    transition: border 0.2s ease, box-shadow 0.2s ease;
-    margin-bottom: 6.4rem;
+    transition: border 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .todo-list-input:hover {
     box-shadow: 6px 6px 0px 0px var(--shadow-color);
-    transition: border 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--text-area-background-color-prominent);
+    transition: border 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .todo-list-input::placeholder {
@@ -159,7 +232,7 @@ input[type="checkbox"] {
 .todo-list-input:focus {
     outline: none;
     border: 8px solid var(--primary-color);
-    transition: border 0.2s ease, box-shadow 0.2s ease;
+    transition: border 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }   
 
 .add-button {
@@ -169,25 +242,28 @@ input[type="checkbox"] {
     font-size: 2rem;
     font-weight: 600;
     border: 8px solid var(--color-black);
-    background-color: var(--color-white);
+    background-color: var(--add-button-background-color);
     color: var(--text-primary-color);
     box-shadow: 0px 0px 0px 0px var(--shadow-color);
-    transition: border 0.2s ease, box-shadow 0.2s ease;
+    transition: border 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .add-button:focus {
     outline: none;
     border: 8px solid var(--primary-color);
-    transition: border 0.2s ease, box-shadow 0.2s ease;
+    transition: border 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .add-button:hover {
     box-shadow: 6px 6px 0px 0px var(--shadow-color);
-    transition: border 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--add-button-background-color-prominent);
+    transition: border 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .add-button:active {
     box-shadow: none;
+    background-color: var(--add-button-background-color-active);
+    transition: border 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .show {
@@ -211,24 +287,27 @@ input[type="checkbox"] {
     margin-right: 6.4rem;
     margin-bottom: 6.4rem;
     padding: 3.2rem;
-    border: 4px solid var(--color-black);
+    border: 4px solid var(--fab-primary-color);
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
-    background-color: var(--color-black);
+    background-color: var(--fab-primary-color);
     stroke: var(--color-white);
     box-shadow: 0px 0px 0px 0px #000;
     transition: box-shadow 0.2s ease, transform 0.2s ease,
-                background-color 0.2s ease, stroke 0.2s ease;
+                background-color 0.2s ease, stroke 0.2s ease,
+                border 0.2s ease;
 }
 
 .fab:hover {
     box-shadow: 6px 6px 0px 0px var(--shadow-color);
-    background-color: var(--color-white);
-    stroke: var(--color-black);
+    background-color: var(--accent-color);
+    stroke: var(--fab-stroke-color-hovered);
+    border: 4px solid var(--fab-border-color-hovered);
     transform: translate(0px, -8px);
     transition: box-shadow 0.2s ease, transform 0.2s ease,
-                background-color 0.2s ease, stroke 0.2s ease;
+                background-color 0.2s ease, stroke 0.2s ease,
+                border 0.2s ease;
 }
 
 .empty-state {
@@ -257,6 +336,18 @@ input[type="checkbox"] {
     margin-bottom: 3.2rem;
 }
 
+.icon-rect {
+    fill: var(--color-rect);
+}
+
+.icon-rect-fill {
+    fill: var(--color-white);
+}
+
+.icon-rect-outline {
+    stroke: var(--color-rect);
+}
+
 .todo-list:empty {
     display: none;
 }
@@ -269,6 +360,49 @@ input[type="checkbox"] {
     color: var(--text-primary-color);
     font-weight: 700;
 }
+
+.color-mode_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 7.4rem;
+    left: 6.4rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--color-black, #212121);
+    cursor: pointer;
+    background: none;
+    border: none;
+    -webkit-appearance: none;
+  }
+  
+.color-mode_btn svg {
+    width: 30px;
+    height: 30px;
+    margin-left: 0.8rem;
+    padding-bottom: 0.3rem;
+    fill: none;
+    stroke: var(--color-black, #212121);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5px;
+    transition: transform 0.2s ease;
+  }
+
+.color-mode_btn:hover svg,
+.color-mode_btn:focus svg {
+  outline: none;
+  fill: #fff7d6;
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.color-mode_btn:focus {
+    outline: 2px dashed var(--primary-color, #003ce4);
+}
+
 
 #main-div {
     display: grid;
@@ -324,6 +458,11 @@ input[type="checkbox"] {
     .fab {
         margin-right: 3.2rem;
         margin-bottom: 3.2rem;
+    }
+
+    .color-mode_btn {
+        left: 3.2rem;
+        bottom: 4rem;
     }
 
     #main-div {

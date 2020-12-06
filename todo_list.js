@@ -25,10 +25,13 @@ window.onload = function() {
         node.setAttribute("data-key", task.id);
 
         // Set the contents of the list element.
+        dark_or_light = document.documentElement.getAttribute("color-mode");
+        dark_or_light = dark_or_light == "light" ? "assets/trash_2.svg": "assets/trash-2_dark.svg";
+        
         node.innerHTML = `
             <label for="${task.id}" class="tick js-tick">${task.text}</label>
             <input id="${task.id}" type="checkbox"/>
-            <img src="assets/trash_2.svg" class="delete-button" alt="Delete button">
+            <img src="${dark_or_light}" class="delete-button" alt="Delete button">
         `;
 
         list.append(node);

@@ -22,6 +22,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io_cleanlist/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io_cleanlist/favicon-16x16.png">
     <script src="todo_list.js"></script>
+    <script>
+        if (
+          localStorage.getItem("color-mode") === "dark" ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+            !localStorage.getItem("color-mode"))
+        ) {
+          document.documentElement.setAttribute("color-mode", "dark");
+        }
+    </script>
 </head>
 
 <body>
@@ -35,10 +44,10 @@
         <div class="empty-state">
             <h3 class="empty-state-title">Add a new task to get started</h2>
             <svg class ="empty-state-icon" alt="Empty task list icon" width="70" height="80" viewBox="0 0 70 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="2" width="66" height="76" fill="white" stroke="#212121" stroke-width="4"/>
-                <rect x="13" y="18" width="20" height="8" fill="#212121"/>
-                <rect x="13" y="36" width="45" height="8" fill="#212121"/>
-                <rect x="13" y="54" width="45" height="8" fill="#212121"/>
+                <rect class="icon-rect-outline icon-rect-fill" x="2" y="2" width="66" height="76" stroke-width="4"/>
+                <rect class="icon-rect" x="13" y="18" width="20" height="8"/>
+                <rect class="icon-rect" x="13" y="36" width="45" height="8"/>
+                <rect class="icon-rect" x="13" y="54" width="45" height="8"/>
             </svg>    
             <p class="empty-state-desc">Press the button in the <span class="strong-text">bottom right 
                 corner</span> to add a new task.</p>
@@ -58,6 +67,46 @@
                   placeholder="E.g. End world hunger" class="todo-list-input"></textarea>
         <button class="add-button" aria-label="Add new todo item">ADD</button>
     </form>
+
+    <svg style="display: none;">
+        <symbol viewBox="0 0 24 24" id="moon">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </symbol>
+        <symbol viewBox="0 0 24 24" id="sun">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </symbol>
+      </svg>
+
+    <!-- Light mode button -->
+    <button
+        class="color-mode_btn light-hidden uppercase"
+        aria-label="Toggle light mode">
+        Light
+        <svg aria-hidden="true">
+            <title>Light Mode</title>
+            <use href="#sun"></use>
+        </svg>
+    </button>
+
+    <!-- Dark mode button -->
+    <button
+        class="color-mode_btn dark-hidden uppercase"
+        aria-label="Toggle dark mode">
+        Dark
+        <svg aria-hidden="true">
+            <title>Dark Mode</title>
+            <use href="#moon"></use>
+        </svg>
+    </button>
+    <script src="toggle_color_mode.js"></script>
 </body>
 
 </html>
