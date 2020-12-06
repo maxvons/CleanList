@@ -29,6 +29,7 @@
     --fab-stroke-color-hovered: #212121;
     --fab-border-color-hovered: #212121;
     --delete-button-color: #212121;
+    --list-border-hover-color: #212121;
 
     /* Light misc. colors */
     --color-black: #212121;
@@ -69,6 +70,7 @@
     --fab-stroke-color-hovered: #212121;
     --fab-border-color-hovered: #64FFDA;
     --delete-button-color: #D2D5E7;
+    --list-border-hover-color: #9baaff;
 
     /* Dark misc. colors */
     --color-black: #E3E3E4;
@@ -127,19 +129,21 @@ li {
     margin-bottom: 3.2rem;
     max-width: 40rem;
     box-shadow: 0px 0px 0px 0px #000;
-    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease, border 0.2s ease;
 }
 
 li:hover {
     box-shadow: 6px 6px 0px 0px var(--shadow-color);
     background-color: var(--list-background-color-prominent);
-    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+    border: 4px solid var(--list-border-hover-color);
+    transition: box-shadow 0.2s ease, background-color 0.2s ease, border 0.2s ease;
 }
 
 li:active {
     box-shadow: 0px 0px 0px 0px var(--shadow-color);
     background-color: var(--list-background-color-active);
-    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+    border: 4px solid var(--list-border-hover-color);
+    transition: box-shadow 0.2s ease, background-color 0.2s ease, border 0.2s ease;
 }
 
 label {
