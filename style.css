@@ -370,12 +370,9 @@ input[type="checkbox"] {
     align-items: center;
     justify-content: center;
     position: fixed;
-    bottom: 7.4rem;
+    bottom: 9.4rem;
     left: 6.4rem;
-    font-size: 1.6rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    color: var(--color-black, #212121);
+    padding: 0;
     cursor: pointer;
     background: none;
     border: none;
@@ -383,10 +380,8 @@ input[type="checkbox"] {
   }
   
 .color-mode_btn svg {
-    width: 30px;
-    height: 30px;
-    margin-left: 0.8rem;
-    padding-bottom: 0.3rem;
+    width: 40px;
+    height: 40px;
     fill: none;
     stroke: var(--color-black, #212121);
     stroke-linecap: round;
@@ -404,7 +399,7 @@ input[type="checkbox"] {
 }
 
 .color-mode_btn:focus {
-    outline: 2px dashed var(--primary-color, #003ce4);
+    outline: 2px dashed var(--primary-color, #212121);
 }
 
 
