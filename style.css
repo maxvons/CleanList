@@ -531,37 +531,17 @@ input[type="checkbox"] {
     }
 }
 
-@media screen and (max-height: 900px) {
-    .heading-div {
-        margin-bottom: 6.4rem;
-    }
-}
-
-/* Two column layout for wider screens */
+/* Multi-column layout for larger screens */
 @media screen and (min-width: 900px) {
     li {
-        flex-basis: 40%;
-        flex-grow: 1;
         padding: 1.6rem;
         margin: 0 1.6rem 3.2rem 1.6rem;
     }
     .todo-list {
-        width: 70%;
+        width: 55vw;
         margin: auto;
         flex-flow: row wrap;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: flex-start;
-    }
-}
-
-/* Three column layout for massive screens */
-@media screen and (min-width: 1400px) {
-    li {
-        flex-basis: 28%;
-        flex-grow: 1;
-    }
-
-    .todo-list {
-        width: 80%;
     }
 }
