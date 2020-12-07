@@ -520,8 +520,8 @@ input[type="checkbox"] {
     .fab:hover {
         box-shadow: none;
         margin-bottom: 3.2rem;
-        background-color: var(--color-black);
-        fill: var(--color-white);
+        background-color: var(--fab-primary-color);
+        stroke: var(--color-white);
     }
 
     .add-button:hover {
