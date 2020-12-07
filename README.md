@@ -22,15 +22,15 @@ information overload.
 
 #### Light mode (standard)
 
-<img src="assets/cleanlist_demo_light.png" alt="Clean List light mode" width="50%" height="50%">
+<img src="assets/cleanlist_demo_light.png" alt="Clean List light mode">
 
 #### Dark mode
 
-<img src="assets/cleanlist_demo_dark.png" alt="Clean List dark mode" width="50%" height="50%">
+<img src="assets/cleanlist_demo_dark.png" alt="Clean List dark mode">
 
 #### Gif demo
 
-<img src="assets/cleanlist.gif" alt="Clean List gif demo" width="50%" height="50%">
+<img src="assets/cleanlist.gif" alt="Clean List gif demo">
 
 ### Got some feedback?
 
