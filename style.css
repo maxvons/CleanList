@@ -467,10 +467,6 @@ input[type="checkbox"] {
         left: 3.2rem;
         bottom: 4rem;
     }
-
-    #main-div {
-        margin-top: 3.2rem;
-    }
 }
 
 @media screen and (max-width: 580px) {
@@ -495,7 +491,6 @@ input[type="checkbox"] {
 
     .heading-div {
         margin-bottom: 3.2rem;
-        padding: 1.6rem;
         width: 80vw;
     }
 
@@ -510,6 +505,10 @@ input[type="checkbox"] {
 
     .fab {
         padding: 1.6rem;
+    }
+
+    #main-div {
+        margin-top: 1.6rem;
     }
 }
 
