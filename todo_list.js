@@ -12,7 +12,7 @@ window.onload = function() {
 
     function renderTask(task) {
         localStorage.setItem("tasksRef", JSON.stringify(tasks));
-        
+
         const list = document.querySelector(".todo-list");
 
         // Check if task is done or not.
@@ -27,7 +27,7 @@ window.onload = function() {
         // Set the contents of the list element.
         dark_or_light = document.documentElement.getAttribute("color-mode");
         dark_or_light = dark_or_light == "light" ? "assets/trash_2.svg": "assets/trash-2_dark.svg";
-        
+
         node.innerHTML = `
             <label for="${task.id}" class="tick js-tick">${task.text}</label>
             <input id="${task.id}" type="checkbox"/>
