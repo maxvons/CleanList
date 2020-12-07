@@ -524,6 +524,13 @@ input[type="checkbox"] {
         fill: var(--color-white);
     }
 
+    .fab:active {
+        box-shadow: none;
+        margin-bottom: 3.2rem;
+        background-color: var(--color-black);
+        fill: var(--color-white);
+    }
+
     .add-button:hover {
         box-shadow: none;
     }
