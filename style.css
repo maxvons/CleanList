@@ -97,7 +97,8 @@ html {
 
 body {
     margin: 0;
-    background-color: var(--background-color, #FFF)
+    background-color: var(--background-color, #FFF);
+    transition: background-color 0.2s ease;
 }
 
 img {
@@ -125,21 +126,21 @@ li {
     margin-bottom: 3.2rem;
     max-width: 40rem;
     box-shadow: 0px 0px 0px 0px #000;
-    transition: box-shadow 0.2s ease, background-color 0.2s ease, border 0.2s ease;
+    transition: color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border 0.2s ease;
 }
 
 li:hover {
     box-shadow: 6px 6px 0px 0px var(--shadow-color);
     background-color: var(--list-background-color-prominent);
     border: 4px solid var(--list-border-hover-color);
-    transition: box-shadow 0.2s ease, background-color 0.2s ease, border 0.2s ease;
+    transition: color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border 0.2s ease;
 }
 
 li:active {
     box-shadow: 0px 0px 0px 0px var(--shadow-color);
     background-color: var(--list-background-color-active);
     border: 4px solid var(--list-border-hover-color);
-    transition: box-shadow 0.2s ease, background-color 0.2s ease, border 0.2s ease;
+    transition: color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border 0.2s ease;
 }
 
 label {
@@ -170,6 +171,7 @@ input[type="checkbox"] {
     color: var(--text-primary-color);
     text-align: center;
     margin-bottom: 6.4rem;
+    transition: color 0.2s ease;
 }
 
 .tasks-heading {
@@ -179,6 +181,7 @@ input[type="checkbox"] {
     margin: 0 0 3.2rem 0;
     text-transform: uppercase;
     text-align: center;
+    transition: color 0.2s ease;
 }
 
 .todo-list {
@@ -319,12 +322,14 @@ input[type="checkbox"] {
     color: var(--text-primary-color);
     margin-bottom: 3.2rem;
     margin-top: 3.2rem;
+    transition: color 0.2s ease;
 }
 
 .empty-state-desc {
     margin: 0;
     font-size: 1.8rem;
     color: var(--text-secondary-color);
+    transition: color 0.2s ease;
 }
 
 .empty-state-icon {
@@ -335,6 +340,7 @@ input[type="checkbox"] {
 
 .icon-rect {
     fill: var(--color-rect);
+    transition: fill 0.2s ease;
 }
 
 .icon-rect-fill {
@@ -343,6 +349,7 @@ input[type="checkbox"] {
 
 .icon-rect-outline {
     stroke: var(--color-rect);
+    transition: stroke 0.2s ease, fill 0.2s ease;
 }
 
 .todo-list:empty {
