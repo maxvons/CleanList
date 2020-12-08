@@ -21,7 +21,7 @@ function change_date() {
 
     if (date_str !== title_date) {
         title.textContent = date_str;
-        sub_title.textContent = days_with_names[day];
+        sub_title.textContent = day;
 
         console.log(`Updated date to ${date_str} and day to ${day}`);
     }
@@ -32,7 +32,7 @@ change_date();
 (function loop() {
     console.log("checked");
     let current = new Date();
-    if (current.getHours() === 24 && current.getMinutes() === 0) {
+    if (current.getHours() === 00 && current.getMinutes() === 0) {
         change_date();
     }
     current = new Date();
