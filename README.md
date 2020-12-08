@@ -1,8 +1,6 @@
-# Clean List
+# [Clean List](https://cleanlist.netlify.app/ "The best to-do list")
 
 ## A simple and clean to-do list for all your important tasks
-
-### Why use this?
 
 If you are anything like me, you are probably tired of all the over-the-top
 to-do lists out there.
