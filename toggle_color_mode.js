@@ -36,4 +36,4 @@ const toggleColorButtons = document.querySelectorAll(".color-mode_btn");
 
 toggleColorButtons.forEach(btn => {
     btn.addEventListener("click", toggleColorMode);
-})
+});

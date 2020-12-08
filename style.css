@@ -14,6 +14,7 @@
     --del-button-background-color: #FFFFFF;
     --del-button-background-color-prominent: #FFFFFF;
     --empty-state-icon-background-color: #FFFFFF;
+    --progress-indicator-background-color: #003ce4;
 
     /* Light primary and secondary colors */
     --primary-color: #003ce4;
@@ -56,6 +57,7 @@
     --del-button-background-color: rgba(0, 0, 0, 0);
     --del-button-background-color-prominent: #25262E;
     --empty-state-icon-background-color: #1B1D25;
+    --progress-indicator-background-color: #fff09b;
 
     /* Dark primary and secondary colors */
     --primary-color: #9baaff;
@@ -151,6 +153,13 @@ input[type="checkbox"] {
     display: none;
 }
 
+.progress-indicator {
+    position: fixed;
+    top: 0;
+    height: 8px;
+    background-color: var(--progress-indicator-background-color);
+    transition: width 1s ease;
+}
 
 .title {
     display: inline;

@@ -12,8 +12,8 @@ simple that **does the job**, and **looks good** doing it.
 This website functions exactly how you would expect. You press a button, enter
 your task information, and the task information gets added to a list. There's an
 optional dark mode, some nice animations, and *that's it*. No messing with
-different settings, having to go through a tutorial, navigating through different folders, or
-information overload.
+different settings, having to go through a tutorial, navigating through different
+folders or information overload.
 *Just a **clean list***.
 
 ### Screenshots

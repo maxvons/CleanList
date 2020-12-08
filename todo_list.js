@@ -10,6 +10,14 @@ window.onload = function() {
           });
         }
 
+    // Set progress indicator width on browser refresh
+    const progress_indicator_width = localStorage.getItem("progress-indicator-width");
+    const progress_indicator = document.querySelector(".progress-indicator");
+    
+    if (progress_indicator_width) {
+        progress_indicator.style.width = progress_indicator_width;
+    }
+
     function renderTask(task) {
         localStorage.setItem("tasksRef", JSON.stringify(tasks));
 
@@ -97,6 +105,23 @@ window.onload = function() {
         }
     }
 
+    function increment_progress_indicator() {
+        const progress_indicator = document.querySelector(".progress-indicator");
+        const current_width = progress_indicator.style.width;
+        const current_width_val = parseInt(current_width.slice(0, -1));
+        console.log(current_width_val);
+        console.log(current_width);
+
+        if (current_width !== "100%") {
+            const updated_width = `${current_width_val+20}%`
+            progress_indicator.style.width = updated_width;
+
+            // Set value in local storage
+            localStorage.setItem("progress-indicator-width", updated_width);
+            console.log(`Set width in local storage to ${updated_width}`)
+        }
+    }
+
     const form = document.getElementById("todo-list-form");
 
     form.addEventListener("submit", event => {
@@ -137,6 +162,7 @@ window.onload = function() {
                 itemKey = event.target.parentElement.dataset.key;
             }
             removeTask(itemKey);
+            increment_progress_indicator();
         }
     });
 

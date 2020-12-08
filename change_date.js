@@ -13,8 +13,8 @@ function change_date() {
         7: "Sun"
     };
 
-    date_str = current.toLocaleDateString().replace(/\//g, ".");
-    day = days_with_names[current.getDay().toString()];
+    const date_str = current.toLocaleDateString().replace(/\//g, ".");
+    const day = days_with_names[current.getDay().toString()];
 
     console.log(`date: ${date_str}, day: ${day}`);
     console.log(title_date);
@@ -24,6 +24,16 @@ function change_date() {
         sub_title.textContent = day;
 
         console.log(`Updated date to ${date_str} and day to ${day}`);
+
+        if ((localStorage.getItem("date") !== date_str)) {
+            // Reset progress indicator
+            document.querySelector(".progress-indicator").style.width = "0%";
+
+            // Reset local storage
+            localStorage.setItem("progress-indicator-width", "0%");
+        }
+        
+        localStorage.setItem("date", date_str);
     }
 }
 
