@@ -119,6 +119,11 @@ window.onload = function() {
             // Set value in local storage
             localStorage.setItem("progress-indicator-width", updated_width);
             console.log(`Set width in local storage to ${updated_width}`)
+
+            if (updated_width === "100%") {
+                const tasks_heading = document.querySelector(".tasks-heading");
+                tasks_heading.classList += " animate__animated animate__flip"
+            }
         }
     }
 
