@@ -4,13 +4,13 @@ function change_date() {
     const current = new Date();
     const title_date = title.textContent;
     const days_with_names = {
+        0: "Sun",
         1: "Mon",
         2: "Tue",
         3: "Wed",
         4: "Thu",
         5: "Fri",
         6: "Sat",
-        7: "Sun"
     };
 
     const date_str = current.toLocaleDateString().replace(/\//g, ".");
