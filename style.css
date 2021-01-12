@@ -135,14 +135,12 @@ li:hover {
     box-shadow: 6px 6px 0px 0px var(--shadow-color);
     background-color: var(--list-background-color-prominent);
     border: 4px solid var(--list-border-hover-color);
-    transition: color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border 0.2s ease;
 }
 
 li:active {
     box-shadow: 0px 0px 0px 0px var(--shadow-color);
     background-color: var(--list-background-color-active);
     border: 4px solid var(--list-border-hover-color);
-    transition: color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border 0.2s ease;
 }
 
 label {
@@ -159,6 +157,7 @@ input[type="checkbox"] {
     height: 8px;
     background-color: var(--progress-indicator-background-color);
     transition: width 1s ease;
+    z-index: 1;
 }
 
 .title {
@@ -213,7 +212,6 @@ input[type="checkbox"] {
 
 .delete-button:hover {
     opacity: 50%;
-    transition: opacity 0.2s ease;
 }
 
 .todo-list-input {
@@ -232,7 +230,6 @@ input[type="checkbox"] {
 .todo-list-input:hover {
     box-shadow: 6px 6px 0px 0px var(--shadow-color);
     background-color: var(--text-area-background-color-prominent);
-    transition: border 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .todo-list-input::placeholder {
@@ -243,7 +240,6 @@ input[type="checkbox"] {
 .todo-list-input:focus {
     outline: none;
     border: 8px solid var(--primary-color);
-    transition: border 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }   
 
 .add-button {
@@ -262,19 +258,16 @@ input[type="checkbox"] {
 .add-button:focus {
     outline: none;
     border: 8px solid var(--primary-color);
-    transition: border 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .add-button:hover {
     box-shadow: 6px 6px 0px 0px var(--shadow-color);
     background-color: var(--add-button-background-color-prominent);
-    transition: border 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .add-button:active {
     box-shadow: none;
     background-color: var(--add-button-background-color-active);
-    transition: border 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .show {
@@ -315,8 +308,6 @@ input[type="checkbox"] {
     stroke: var(--fab-stroke-color-hovered);
     border: 4px solid var(--fab-border-color-hovered);
     margin-bottom: 7.2rem;
-    transition: box-shadow 0.2s ease, background-color 0.2s ease, stroke 0.2s ease,
-                border 0.2s ease, margin-bottom 0.2s ease;
 }
 
 .empty-state {
@@ -404,7 +395,6 @@ input[type="checkbox"] {
   outline: none;
   fill: #fff7d6;
   transform: scale(1.1);
-  transition: transform 0.2s ease;
 }
 
 .color-mode_btn:focus {
