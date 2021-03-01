@@ -1,4 +1,4 @@
-# [Clean List](https://cleanlist.netlify.app/ "The best to-do list")
+# [Clean List](https://www.cleanlist.dev/ "The best to-do list")
 
 ## A simple and clean to-do list for all your important tasks
 
