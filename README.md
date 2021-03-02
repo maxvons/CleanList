@@ -7,7 +7,7 @@ to-do lists out there.
 Why do I need 100 features that I never use anyway? You just want something
 simple that **does the job**, and **looks good** doing it.
 
-### Enter *CleanList*
+### Enter *Clean List*
 
 This website functions exactly how you would expect. You press a button, enter
 your task information, and the task information gets added to a list. There's an
